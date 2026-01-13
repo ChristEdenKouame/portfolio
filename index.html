@@ -4,121 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Étudiant développeur</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @keyframes float {
-
-            0%,
-            100% {
-                transform: translateY(0px);
-            }
-
-            50% {
-                transform: translateY(-20px);
-            }
-        }
-
-        @keyframes pulse-glow {
-
-            0%,
-            100% {
-                box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
-            }
-
-            50% {
-                box-shadow: 0 0 40px rgba(147, 51, 234, 0.8);
-            }
-        }
-
-        @keyframes gradient-shift {
-            0% {
-                background-position: 0% 50%;
-            }
-
-            50% {
-                background-position: 100% 50%;
-            }
-
-            100% {
-                background-position: 0% 50%;
-            }
-        }
-
-        .animate-pulse-glow {
-            animation: pulse-glow 3s infinite;
-        }
-
-        .gradient-text {
-            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #ec4899 100%);
-            background-size: 200% 200%;
-            animation: gradient-shift 3s ease infinite;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        .particle {
-            position: absolute;
-            width: 8px;
-            height: 8px;
-            background: rgba(59, 130, 246, 0.4);
-            border-radius: 50%;
-            animation: float-particle 15s infinite;
-        }
-
-        @keyframes float-particle {
-
-            0%,
-            100% {
-                transform: translate(0, 0);
-            }
-
-            25% {
-                transform: translate(100px, -100px);
-            }
-
-            50% {
-                transform: translate(-50px, -200px);
-            }
-
-            75% {
-                transform: translate(150px, -50px);
-            }
-        }
-
-        body {
-            background: #0f172a;
-        }
-    </style>
+    <title>Portfolio - Christ Eden Kouamé</title>
+    <link rel="stylesheet" href="src/style.css">
+    <link href="src/output.css" rel="stylesheet">
 </head>
 
 <body class="bg-gray-950">
     <!-- Header -->
-    <header class="fixed top-0 left-0 right-0 bg-gray-900/80 backdrop-blur-md z-50 border-b border-gray-800">
-        <nav class="container mx-auto px-4 py-4">
-            <div class="flex justify-between items-center">
-                <div class="text-xl font-semibold text-white">Christ Eden Kouamé</div>
+    <header class="fixed top-0 left-0 right-0 z-50 border-b border-gray-800 bg-gray-900/80 backdrop-blur-md">
+        <nav class="container px-4 py-4 mx-auto">
+            <div class="flex items-center justify-between">
+                <div class="text-xl font-semibold text-white"> &lt;Christ Eden Kouamé/&gt;</div>
 
                 <!-- Desktop Navigation -->
-                <div class="hidden md:flex gap-8">
-                    <a href="#home" class="text-gray-300 hover:text-blue-400 transition-colors duration-200">Accueil</a>
-                    <a href="#about" class="text-gray-300 hover:text-blue-400 transition-colors duration-200">À
+                <div class="hidden gap-8 md:flex">
+                    <a href="#home" class="text-gray-300 transition-colors duration-200 hover:text-blue-400">Accueil</a>
+                    <a href="#about" class="text-gray-300 transition-colors duration-200 hover:text-blue-400">À
                         propos</a>
                     <a href="#skills"
-                        class="text-gray-300 hover:text-blue-400 transition-colors duration-200">Compétences</a>
+                        class="text-gray-300 transition-colors duration-200 hover:text-blue-400">Compétences</a>
                     <a href="#projects"
-                        class="text-gray-300 hover:text-blue-400 transition-colors duration-200">Projets</a>
+                        class="text-gray-300 transition-colors duration-200 hover:text-blue-400">Projets</a>
                     <a href="#social"
-                        class="text-gray-300 hover:text-blue-400 transition-colors duration-200">Réseaux</a>
+                        class="text-gray-300 transition-colors duration-200 hover:text-blue-400">Réseaux</a>
                 </div>
 
                 <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn" class="md:hidden text-gray-300">
+                <button id="mobile-menu-btn" class="text-gray-300 md:hidden">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M4 6h16M4 12h16M4 18h16"></path>
@@ -127,20 +39,20 @@
             </div>
 
             <!-- Mobile Navigation -->
-            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 flex flex-col gap-4">
-                <a href="#home" class="text-gray-300 hover:text-blue-400 transition-colors duration-200">Accueil</a>
-                <a href="#about" class="text-gray-300 hover:text-blue-400 transition-colors duration-200">À propos</a>
+            <div id="mobile-menu" class="flex flex-col gap-4 pb-4 mt-4 md:hidden">
+                <a href="#home" class="text-gray-300 transition-colors duration-200 hover:text-blue-400">Accueil</a>
+                <a href="#about" class="text-gray-300 transition-colors duration-200 hover:text-blue-400">À propos</a>
                 <a href="#skills"
-                    class="text-gray-300 hover:text-blue-400 transition-colors duration-200">Compétences</a>
-                <a href="#projects" class="text-gray-300 hover:text-blue-400 transition-colors duration-200">Projets</a>
-                <a href="#social" class="text-gray-300 hover:text-blue-400 transition-colors duration-200">Réseaux</a>
+                    class="text-gray-300 transition-colors duration-200 hover:text-blue-400">Compétences</a>
+                <a href="#projects" class="text-gray-300 transition-colors duration-200 hover:text-blue-400">Projets</a>
+                <a href="#social" class="text-gray-300 transition-colors duration-200 hover:text-blue-400">Réseaux</a>
             </div>
         </nav>
     </header>
 
     <!-- Section Hero -->
     <section id="home"
-        class="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 pt-20 relative overflow-hidden">
+        class="relative flex items-center justify-center min-h-screen pt-20 overflow-hidden bg-linear-to-br from-gray-900 via-blue-900 to-purple-900">
         <!-- Animated Background Elements -->
         <div class="absolute inset-0 overflow-hidden pointer-events-none">
             <div class="particle" style="left: 10%; top: 20%; animation-delay: 0s;"></div>
@@ -156,37 +68,37 @@
             class="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.05)_1px,transparent_1px)] bg-[size:4rem_4rem]">
         </div>
 
-        <div class="container mx-auto px-4 py-20 relative z-10">
-            <div class="flex flex-col items-center text-center max-w-5xl mx-auto">
+        <div class="container relative z-10 px-4 py-20 mx-auto">
+            <div class="flex flex-col items-center max-w-5xl mx-auto text-center">
 
                 <p class="text-lg text-blue-400 ">
                     Bienvenue, je suis Christ Eden Kouamé
                 </p>
 
                 <!-- Main Title -->
-                <h1 class="text-5xl md:text-7xl lg:text-8xl mb-6 font-bold gradient-text">
-                    Développeur d'application junior
+                <h1 class="mb-6 text-5xl font-bold md:text-7xl lg:text-8xl gradient-text">
+                    Développeur d'application
                 </h1>
 
                 <!-- Subtitle -->
-                <p class="text-xl md:text-2xl text-gray-300 mb-4 max-w-3xl">
+                <p class="max-w-3xl mb-4 text-xl text-gray-300 md:text-2xl">
                     Passionné par la création de solutions numériques innovantes
                 </p>
 
-                <p class="text-lg text-blue-400 mb-8">
+                <p class="mb-8 text-lg text-blue-400">
                     En apprentissage continu pour maîtriser les technologies modernes
                 </p>
 
                 <!-- Fun Facts -->
-                <div class="flex flex-wrap gap-6 justify-center mb-8 text-sm text-gray-300">
-                    <div class="flex items-center gap-2 bg-gray-800/50 px-4 py-2 rounded-full backdrop-blur-sm">
+                <div class="flex flex-wrap justify-center gap-6 mb-8 text-sm text-gray-300">
+                    <div class="flex items-center gap-2 px-4 py-2 rounded-full bg-gray-800/50 backdrop-blur-sm">
                         <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                         </svg>
                         <span>Code propre</span>
                     </div>
-                    <div class="flex items-center gap-2 bg-gray-800/50 px-4 py-2 rounded-full backdrop-blur-sm">
+                    <div class="flex items-center gap-2 px-4 py-2 rounded-full bg-gray-800/50 backdrop-blur-sm">
                         <svg class="w-5 h-5 text-purple-400" fill="currentColor" viewBox="0 0 24 24">
                             <path
                                 d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
@@ -200,7 +112,7 @@
 
                     <!-- GitHub -->
                     <a href="https://github.com" target="_blank"
-                        class="p-4 bg-gray-800/50 backdrop-blur-sm rounded-full shadow-lg hover:shadow-2xl hover:scale-110 transition-all duration-300 text-gray-300 hover:bg-gray-700 hover:text-white group border border-gray-700">
+                        class="p-4 text-gray-300 transition-all duration-300 border border-gray-700 rounded-full shadow-lg bg-gray-800/50 backdrop-blur-sm hover:shadow-2xl hover:scale-110 hover:bg-gray-700 hover:text-white group">
                         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                             <path
                                 d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
@@ -209,7 +121,7 @@
 
                     <!-- LinkedIn -->
                     <a href="https://linkedin.com" target="_blank"
-                        class="p-4 bg-gray-800/50 backdrop-blur-sm rounded-full shadow-lg hover:shadow-2xl hover:scale-110 transition-all duration-300 text-gray-300 hover:bg-blue-600 hover:text-white border border-gray-700">
+                        class="p-4 text-gray-300 transition-all duration-300 border border-gray-700 rounded-full shadow-lg bg-gray-800/50 backdrop-blur-sm hover:shadow-2xl hover:scale-110 hover:bg-blue-600 hover:text-white">
                         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                             <path
                                 d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
@@ -218,7 +130,7 @@
 
                     <!-- Mail -->
                     <a href="mailto:contact@example.com"
-                        class="p-4 bg-gray-800/50 backdrop-blur-sm rounded-full shadow-lg hover:shadow-2xl hover:scale-110 transition-all duration-300 text-gray-300 hover:bg-red-500 hover:text-white border border-gray-700">
+                        class="p-4 text-gray-300 transition-all duration-300 border border-gray-700 rounded-full shadow-lg bg-gray-800/50 backdrop-blur-sm hover:shadow-2xl hover:scale-110 hover:bg-red-500 hover:text-white">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -229,28 +141,28 @@
                 <!-- CTA Button -->
                 <div class="flex gap-2">
                     <a href="#projects"
-                    class="px-8 py-3 bg-gray-900 text-white rounded-xl shadow-xl hover:shadow-2xl hover:scale-[1.01] transition-all duration-300 text-lg font-semibold">
-                    Découvrir mes projets
-                </a>
-                <a href="#projects"
-                    class="px-8 text-gray-900 py-3 border-2 border-gray-900 rounded-xl shadow-xl hover:shadow-2xl hover:scale-[1.01] transition-all duration-300 text-lg font-semibold">
-                    Télécharger mon CV
-                </a>
+                        class="px-8 py-3 bg-gray-900 text-white rounded-xl shadow-xl hover:shadow-2xl hover:scale-[1.01] transition-all duration-300 text-lg font-semibold">
+                        Découvrir mes projets
+                    </a>
+                    <a href="#projects"
+                        class="px-8 text-gray-900 py-3 border-2 border-gray-900 rounded-xl shadow-xl hover:shadow-2xl hover:scale-[1.01] transition-all duration-300 text-lg font-semibold">
+                        Télécharger mon CV
+                    </a>
                 </div>
-                
+
             </div>
         </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="py-20 bg-gray-900">
-        <div class="container mx-auto px-4">
-            <div class="max-w-7xl mx-auto">
-                <h2 class="text-3xl md:text-4xl text-center mb-4 text-white font-bold">À propos de moi</h2>
-                <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mb-12"></div>
+        <div class="container px-4 mx-auto">
+            <div class="mx-auto max-w-7xl">
+                <h2 class="mb-4 text-3xl font-bold text-center text-white md:text-4xl">À propos de moi</h2>
+                <div class="w-20 h-1 mx-auto mb-12 bg-linear-to-r from-blue-500 to-purple-500"></div>
 
-                <div class="text-center mb-12">
-                    <p class="text-gray-300 leading-relaxed mb-4">
+                <div class="mb-12 text-center">
+                    <p class="mb-4 leading-relaxed text-gray-300">
                         Je suis un étudiant en développement d’applications, passionné
                         par la technologie et l’innovation. J’ai été déclaré admissible
                         au BTS option Informatique – Développeur d’Applications (session 2025)
@@ -260,48 +172,48 @@
                         à apprendre, avec curiosité et rigueur, afin de devenir un professionnel
                         capable de concevoir des applications utiles et fiables.
                     </p>
-                    <p class="text-gray-300 leading-relaxed">
+                    <p class="leading-relaxed text-gray-300">
                         Chaque projet est pour moi une opportunité d'apprentissage. Je m'efforce de créer des
                         solutions fonctionnelles et élégantes, en appliquant les meilleures pratiques de développement
                         et en restant à l'affût des dernières tendances technologiques.
                     </p>
                 </div>
 
-                <div class="grid md:grid-cols-3 gap-8">
+                <div class="grid gap-8 md:grid-cols-3">
                     <div
-                        class="text-center p-6 bg-gray-800 rounded-lg hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-200 border border-gray-700">
+                        class="p-6 text-center transition-all duration-200 bg-gray-800 border border-gray-700 rounded-lg hover:shadow-lg hover:shadow-blue-500/20">
                         <div class="flex justify-center mb-4 text-blue-400">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                             </svg>
                         </div>
-                        <h3 class="text-xl mb-2 text-white font-semibold">Curiosité</h3>
+                        <h3 class="mb-2 text-xl font-semibold text-white">Curiosité</h3>
                         <p class="text-gray-400">Toujours à la recherche de nouvelles technologies et approches</p>
                     </div>
 
                     <div
-                        class="text-center p-6 bg-gray-800 rounded-lg hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-200 border border-gray-700">
+                        class="p-6 text-center transition-all duration-200 bg-gray-800 border border-gray-700 rounded-lg hover:shadow-lg hover:shadow-purple-500/20">
                         <div class="flex justify-center mb-4 text-purple-400">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                             </svg>
                         </div>
-                        <h3 class="text-xl mb-2 text-white font-semibold">Apprentissage continu</h3>
+                        <h3 class="mb-2 text-xl font-semibold text-white">Apprentissage continu</h3>
                         <p class="text-gray-400">Engagement constant à améliorer mes compétences et connaissances</p>
                     </div>
 
                     <div
-                        class="text-center p-6 bg-gray-800 rounded-lg hover:shadow-lg hover:shadow-pink-500/20 transition-all duration-200 border border-gray-700">
+                        class="p-6 text-center transition-all duration-200 bg-gray-800 border border-gray-700 rounded-lg hover:shadow-lg hover:shadow-pink-500/20">
                         <div class="flex justify-center mb-4 text-pink-400">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                             </svg>
                         </div>
-                        <h3 class="text-xl mb-2 text-white font-semibold">Compétences techniques</h3>
-                        <p class="text-gray-400">Solides bases en développement web et mobile</p>
+                        <h3 class="mb-2 text-xl font-semibold text-white">Compétences techniques</h3>
+                        <p class="text-gray-400">Solides bases en développement web</p>
                     </div>
                 </div>
             </div>
@@ -310,69 +222,69 @@
 
     <!-- Section Compétences -->
     <section id="skills" class="py-20 bg-gray-950">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl text-center mb-4 text-white font-bold">Compétences</h2>
-            <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mb-12"></div>
+        <div class="container px-4 mx-auto">
+            <h2 class="mb-4 text-3xl font-bold text-center text-white md:text-4xl">Compétences</h2>
+            <div class="w-20 h-1 mx-auto mb-12 bg-linear-to-r from-blue-500 to-purple-500"></div>
 
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+            <div class="grid grid-cols-2 gap-6 mx-auto md:grid-cols-3 lg:grid-cols-3 max-w-7xl">
                 <!-- PHP -->
                 <div
-                    class="bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-xl hover:shadow-indigo-500/20 duration-200 flex flex-col items-center justify-center text-center border border-gray-700">
+                    class="flex flex-col items-center justify-center p-6 text-center duration-200 bg-gray-800 border border-gray-700 rounded-lg shadow-md hover:shadow-xl hover:shadow-indigo-500/20">
                     <svg class="w-12 h-12 mb-3 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                     </svg>
-                    <h3 class="text-white font-semibold">PHP</h3>
+                    <h3 class="font-semibold text-white">PHP</h3>
                 </div>
 
                 <!-- Laravel -->
                 <div
-                    class="bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-xl hover:shadow-red-500/20 duration-200 flex flex-col items-center justify-center text-center border border-gray-700">
+                    class="flex flex-col items-center justify-center p-6 text-center duration-200 bg-gray-800 border border-gray-700 rounded-lg shadow-md hover:shadow-xl hover:shadow-red-500/20">
                     <svg class="w-12 h-12 mb-3 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                     </svg>
-                    <h3 class="text-white font-semibold">Laravel</h3>
+                    <h3 class="font-semibold text-white">Laravel</h3>
+                </div>
+
+                <!-- JavaScript -->
+                <div
+                    class="flex flex-col items-center justify-center p-6 text-center duration-200 bg-gray-800 border border-gray-700 rounded-lg shadow-md hover:shadow-xl hover:shadow-orange-500/20">
+                    <svg class="w-12 h-12 mb-3 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                    </svg>
+                    <h3 class="font-semibold text-white">JavaScript</h3>
                 </div>
 
                 <!-- MySQL -->
                 <div
-                    class="bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-xl hover:shadow-blue-500/20  duration-200 flex flex-col items-center justify-center text-center border border-gray-700">
+                    class="flex flex-col items-center justify-center p-6 text-center duration-200 bg-gray-800 border border-gray-700 rounded-lg shadow-md hover:shadow-xl hover:shadow-blue-500/20">
                     <svg class="w-12 h-12 mb-3 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
                     </svg>
-                    <h3 class="text-white font-semibold">MySQL</h3>
+                    <h3 class="font-semibold text-white">MySQL</h3>
                 </div>
 
                 <!-- Tailwind CSS -->
                 <div
-                    class="bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-xl hover:shadow-cyan-500/20  duration-200 flex flex-col items-center justify-center text-center border border-gray-700">
+                    class="flex flex-col items-center justify-center p-6 text-center duration-200 bg-gray-800 border border-gray-700 rounded-lg shadow-md hover:shadow-xl hover:shadow-cyan-500/20">
                     <svg class="w-12 h-12 mb-3 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
                     </svg>
-                    <h3 class="text-white font-semibold">Tailwind CSS</h3>
+                    <h3 class="font-semibold text-white">Tailwind CSS</h3>
                 </div>
 
                 <!-- Xampp -->
                 <div
-                    class="bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-xl hover:shadow-blue-600/20  duration-200 flex flex-col items-center justify-center text-center border border-gray-700">
+                    class="flex flex-col items-center justify-center p-6 text-center duration-200 bg-gray-800 border border-gray-700 rounded-lg shadow-md hover:shadow-xl hover:shadow-blue-600/20">
                     <svg class="w-12 h-12 mb-3 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
                     </svg>
-                    <h3 class="text-white font-semibold">Xampp Server</h3>
-                </div>
-
-                <!-- FPDF -->
-                <div
-                    class="bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-xl hover:shadow-orange-500/20  duration-200 flex flex-col items-center justify-center text-center border border-gray-700">
-                    <svg class="w-12 h-12 mb-3 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                    </svg>
-                    <h3 class="text-white font-semibold">FPDF</h3>
+                    <h3 class="font-semibold text-white">Xampp Server</h3>
                 </div>
             </div>
         </div>
@@ -380,39 +292,41 @@
 
     <!-- Section Projets -->
     <section id="projects" class="py-20 bg-gray-900">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl text-center mb-4 text-white font-bold">Projets</h2>
-            <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mb-12"></div>
+        <div class="container px-4 mx-auto">
+            <h2 class="mb-4 text-3xl font-bold text-center text-white md:text-4xl">Projets</h2>
+            <div class="w-20 h-1 mx-auto mb-12 bg-linear-to-r from-blue-500 to-purple-500"></div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            <div class="grid gap-8 mx-auto md:grid-cols-2 lg:grid-cols-3 max-w-7xl">
                 <!-- Project 1 -->
                 <div
-                    class="bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-xl hover:shadow-blue-500/20 duration-200 border border-gray-700">
-                    <div class="relative overflow-hidden h-48">
+                    class="overflow-hidden duration-200 bg-gray-800 border border-gray-700 rounded-lg shadow-md hover:shadow-xl hover:shadow-blue-500/20">
+                    <div class="relative h-48 overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1665470909939-959569b20021?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBhcHBsaWNhdGlvbiUyMGRhc2hib2FyZHxlbnwxfHx8fDE3NjgxNTA0NzB8MA&ixlib=rb-4.1.0&q=80&w=1080"
                             alt="Système de gestion"
-                            class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                            class="object-cover w-full h-full transition-transform duration-500 hover:scale-110">
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl mb-3 text-white font-semibold">Système de gestion</h3>
-                        <p class="text-gray-400 mb-4 text-sm leading-relaxed">
-                            Application web complète avec Laravel et MySQL pour la gestion de données. Interface
-                            intuitive avec Tailwind CSS et fonctionnalités d'export PDF avec FPDF.
+                        <h3 class="mb-3 text-xl font-semibold text-white">VOODOO - Presence</h3>
+                        <p class="mb-4 text-sm leading-relaxed text-gray-400">
+                            <strong>Projet Professionnel</strong> - Application web interne de
+                            gestion des présences des employés.
+                            Cette application offre une interface moderne. Elle
+                            permet de suivre et gérer efficacement la présence du personnel.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span
-                                class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-xs border border-blue-500/30">Laravel</span>
+                                class="px-3 py-1 text-xs text-red-400 border rounded-full bg-red-500/20 border-red-500/30">Laravel</span>
                             <span
-                                class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-xs border border-blue-500/30">MySQL</span>
+                                class="px-3 py-1 text-xs text-blue-400 border rounded-full bg-blue-500/20 border-blue-500/30">MySQL</span>
                             <span
-                                class="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-xs border border-cyan-500/30">Tailwind
+                                class="px-3 py-1 text-xs border rounded-full bg-cyan-500/20 text-cyan-400 border-cyan-500/30">Tailwind
                                 CSS</span>
                             <span
-                                class="px-3 py-1 bg-orange-500/20 text-orange-400 rounded-full text-xs border border-orange-500/30">FPDF</span>
+                                class="px-3 py-1 text-xs text-yellow-400 border rounded-full bg-orange-500/20 border-orange-500/30">FPDF</span>
                         </div>
                         <div class="flex gap-4">
                             <a href="https://github.com" target="_blank"
-                                class="flex items-center gap-2 text-gray-400 hover:text-blue-400 transition-colors duration-200">
+                                class="flex items-center gap-2 text-gray-400 transition-colors duration-200 hover:text-blue-400">
                                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                                     <path
                                         d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
@@ -420,7 +334,7 @@
                                 <span class="text-sm">Code</span>
                             </a>
                             <a href="https://github.com" target="_blank"
-                                class="flex items-center gap-2 text-gray-400 hover:text-blue-400 transition-colors duration-200">
+                                class="flex items-center gap-2 text-gray-400 transition-colors duration-200 hover:text-blue-400">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
@@ -433,30 +347,33 @@
 
                 <!-- Project 2 -->
                 <div
-                    class="bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-xl hover:shadow-purple-500/20 duration-200 border border-gray-700">
-                    <div class="relative overflow-hidden h-48">
+                    class="overflow-hidden duration-200 bg-gray-800 border border-gray-700 rounded-lg shadow-md hover:shadow-xl hover:shadow-purple-500/20">
+                    <div class="relative h-48 overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1605108222700-0d605d9ebafe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHAlMjBpbnRlcmZhY2V8ZW58MXx8fHwxNzY4MDcyODIyfDA&ixlib=rb-4.1.0&q=80&w=1080"
                             alt="Application mobile responsive"
-                            class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                            class="object-cover w-full h-full transition-transform duration-500 hover:scale-110">
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl mb-3 text-white font-semibold">Application mobile responsive</h3>
-                        <p class="text-gray-400 mb-4 text-sm leading-relaxed">
-                            Interface mobile moderne et responsive développée avec les dernières technologies web.
-                            Design épuré et performance optimisée.
+                        <h3 class="mb-3 text-xl font-semibold text-white">VOODOO - Visite</h3>
+                        <p class="mb-4 text-sm leading-relaxed text-gray-400">
+                            <strong>Projet Professionnel</strong> - Application web interne de gestion des visites.
+                            Cette solution permet de gérer efficacement les visites internes
+                            au sein de l’entreprise.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span
-                                class="px-3 py-1 bg-indigo-500/20 text-indigo-400 rounded-full text-xs border border-indigo-500/30">PHP</span>
+                                class="px-3 py-1 text-xs text-red-400 border rounded-full bg-red-500/20 border-red-500/30">Laravel</span>
                             <span
-                                class="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-xs border border-cyan-500/30">Tailwind
+                                class="px-3 py-1 text-xs text-blue-400 border rounded-full bg-blue-500/20 border-blue-500/30">MySQL</span>
+                            <span
+                                class="px-3 py-1 text-xs border rounded-full bg-cyan-500/20 text-cyan-400 border-cyan-500/30">Tailwind
                                 CSS</span>
                             <span
-                                class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-xs border border-blue-500/30">Docker</span>
+                                class="px-3 py-1 text-xs text-yellow-400 border rounded-full bg-orange-500/20 border-orange-500/30">FPDF</span>
                         </div>
                         <div class="flex gap-4">
                             <a href="https://github.com" target="_blank"
-                                class="flex items-center gap-2 text-gray-400 hover:text-purple-400 transition-colors duration-200">
+                                class="flex items-center gap-2 text-gray-400 transition-colors duration-200 hover:text-purple-400">
                                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                                     <path
                                         d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
@@ -464,7 +381,7 @@
                                 <span class="text-sm">Code</span>
                             </a>
                             <a href="https://github.com" target="_blank"
-                                class="flex items-center gap-2 text-gray-400 hover:text-purple-400 transition-colors duration-200">
+                                class="flex items-center gap-2 text-gray-400 transition-colors duration-200 hover:text-purple-400">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
@@ -477,31 +394,31 @@
 
                 <!-- Project 3 -->
                 <div
-                    class="bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-xl hover:shadow-pink-500/20 duration-200 border border-gray-700">
-                    <div class="relative overflow-hidden h-48">
+                    class="overflow-hidden duration-200 bg-gray-800 border border-gray-700 rounded-lg shadow-md hover:shadow-xl hover:shadow-pink-500/20">
+                    <div class="relative h-48 overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1753715613831-9e48eac86813?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb2RpbmclMjBwcm9qZWN0JTIwc2NyZWVufGVufDF8fHx8MTc2ODEzODQzOHww&ixlib=rb-4.1.0&q=80&w=1080"
                             alt="Outil de développement"
-                            class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                            class="object-cover w-full h-full transition-transform duration-500 hover:scale-110">
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl mb-3 text-white font-semibold">Outil de développement</h3>
-                        <p class="text-gray-400 mb-4 text-sm leading-relaxed">
-                            Environnement de développement containerisé avec Docker et WSL pour améliorer la
-                            productivité et la portabilité des projets.
+                        <h3 class="mb-3 text-xl font-semibold text-white">Check-Moi Ca</h3>
+                        <p class="mb-4 text-sm leading-relaxed text-gray-400">
+                            <strong>Projet Personnel</strong> - Application de gestion des tâches permettant d’ajouter,
+                            modifier et supprimer des éléments afin de mieux
+                            organiser son quotidien.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span
-                                class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-xs border border-blue-500/30">Docker</span>
+                                class="px-3 py-1 text-xs text-red-400 border rounded-full bg-red-500/20 border-red-500/30">Laravel</span>
                             <span
-                                class="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-xs border border-green-500/30">WSL</span>
+                                class="px-3 py-1 text-xs text-blue-400 border rounded-full bg-blue-500/20 border-blue-500/30">MySQL</span>
                             <span
-                                class="px-3 py-1 bg-indigo-500/20 text-indigo-400 rounded-full text-xs border border-indigo-500/30">PHP</span>
-                            <span
-                                class="px-3 py-1 bg-red-500/20 text-red-400 rounded-full text-xs border border-red-500/30">Laravel</span>
+                                class="px-3 py-1 text-xs border rounded-full bg-cyan-500/20 text-cyan-400 border-cyan-500/30">Tailwind
+                                CSS</span>
                         </div>
                         <div class="flex gap-4">
                             <a href="https://github.com" target="_blank"
-                                class="flex items-center gap-2 text-gray-400 hover:text-pink-400 transition-colors duration-200">
+                                class="flex items-center gap-2 text-gray-400 transition-colors duration-200 hover:text-pink-400">
                                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                                     <path
                                         d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
@@ -509,7 +426,102 @@
                                 <span class="text-sm">Code</span>
                             </a>
                             <a href="https://github.com" target="_blank"
-                                class="flex items-center gap-2 text-gray-400 hover:text-pink-400 transition-colors duration-200">
+                                class="flex items-center gap-2 text-gray-400 transition-colors duration-200 hover:text-pink-400">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                </svg>
+                                <span class="text-sm">Démo</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div
+                    class="overflow-hidden duration-200 bg-gray-800 border border-gray-700 rounded-lg shadow-md hover:shadow-xl hover:shadow-pink-500/20">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1753715613831-9e48eac86813?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb2RpbmclMjBwcm9qZWN0JTIwc2NyZWVufGVufDF8fHx8MTc2ODEzODQzOHww&ixlib=rb-4.1.0&q=80&w=1080"
+                            alt="Outil de développement"
+                            class="object-cover w-full h-full transition-transform duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="mb-3 text-xl font-semibold text-white">Go Dé</h3>
+                        <p class="mb-4 text-sm leading-relaxed text-gray-400">
+                            <strong>Projet Personnel</strong> - Application de simulation de lancer
+                            de dé permettant de générer des résultats aléatoires.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span
+                                class="px-3 py-1 text-xs text-red-400 border rounded-full bg-red-500/20 border-red-500/30">HTML</span>
+                            <span
+                                class="px-3 py-1 text-xs border rounded-full bg-cyan-500/20 text-cyan-400 border-cyan-500/30">Tailwind
+                                CSS
+                            </span>
+                            <span
+                                class="px-3 py-1 text-xs text-yellow-400 border rounded-full bg-yellow-500/20 border-yellow-500/30">JavaScript
+                            </span>
+
+                        </div>
+                        <div class="flex gap-4">
+                            <a href="https://github.com" target="_blank"
+                                class="flex items-center gap-2 text-gray-400 transition-colors duration-200 hover:text-pink-400">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                </svg>
+                                <span class="text-sm">Code</span>
+                            </a>
+                            <a href="https://github.com" target="_blank"
+                                class="flex items-center gap-2 text-gray-400 transition-colors duration-200 hover:text-pink-400">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                </svg>
+                                <span class="text-sm">Démo</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div
+                    class="overflow-hidden duration-200 bg-gray-800 border border-gray-700 rounded-lg shadow-md hover:shadow-xl hover:shadow-pink-500/20">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1753715613831-9e48eac86813?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb2RpbmclMjBwcm9qZWN0JTIwc2NyZWVufGVufDF8fHx8MTc2ODEzODQzOHww&ixlib=rb-4.1.0&q=80&w=1080"
+                            alt="Outil de développement"
+                            class="object-cover w-full h-full transition-transform duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="mb-3 text-xl font-semibold text-white">TrainTyping</h3>
+                        <p class="mb-4 text-sm leading-relaxed text-gray-400">
+                            <strong>Projet Personnel</strong> - Jeu de frappes consistant
+                            à taper correctement un texte affiché à l’écran. L’application
+                            permet de s’entraîner à la saisie au clavier.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span
+                                class="px-3 py-1 text-xs text-red-400 border rounded-full bg-red-500/20 border-red-500/30">HTML
+                            </span>
+                            <span
+                                class="px-3 py-1 text-xs border rounded-full bg-cyan-500/20 text-cyan-400 border-cyan-500/30">CSS
+                            </span>
+                            <span
+                                class="px-3 py-1 text-xs text-yellow-400 border rounded-full bg-yellow-500/20 border-yellow-500/30">JavaScript
+                            </span>
+
+                        </div>
+                        <div class="flex gap-4">
+                            <a href="https://github.com" target="_blank"
+                                class="flex items-center gap-2 text-gray-400 transition-colors duration-200 hover:text-pink-400">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                </svg>
+                                <span class="text-sm">Code</span>
+                            </a>
+                            <a href="https://github.com" target="_blank"
+                                class="flex items-center gap-2 text-gray-400 transition-colors duration-200 hover:text-pink-400">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
@@ -525,24 +537,24 @@
 
     <!-- Social Media Section -->
     <section id="social" class="py-20 bg-gray-950">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl text-center mb-4 text-white font-bold">Restons connectés</h2>
-            <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mb-4"></div>
-            <p class="text-center text-gray-400 mb-12 max-w-2xl mx-auto">
+        <div class="container px-4 mx-auto">
+            <h2 class="mb-4 text-3xl font-bold text-center text-white md:text-4xl">Restons connectés</h2>
+            <div class="w-20 h-1 mx-auto mb-4 bg-linear-to-r from-blue-500 to-purple-500"></div>
+            <p class="max-w-2xl mx-auto mb-12 text-center text-gray-400">
                 Retrouvez-moi sur vos plateformes préférées ! Je partage régulièrement mes projets,
                 mes apprentissages et mes réflexions sur le développement web.
             </p>
 
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 gap-6 mx-auto lg:grid-cols-2 max-w-7xl">
                 <!-- GitHub -->
-                <a href="https://github.com" target="_blank"
-                    class="group relative bg-gray-800 p-2 rounded-2xl shadow-lg hover:shadow-2xl hover:shadow-gray-700/50 hover:-translate-y-2 transition-all duration-300 overflow-hidden border border-gray-700">
+                <a href="https://github.com/ChristEdenKouame" target="_blank"
+                    class="relative p-2 overflow-hidden transition-all duration-300 bg-gray-800 border border-gray-700 shadow-lg group rounded-2xl hover:shadow-2xl hover:shadow-gray-700/50 hover:-translate-y-2">
                     <div
-                        class="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        class="absolute inset-0 transition-opacity duration-300 opacity-0 bg-linear-to-br from-gray-700 to-gray-900 group-hover:opacity-100">
                     </div>
-                    <div class="relative z-10 flex gap-6 items-center">
+                    <div class="relative z-10 flex items-center gap-6">
                         <div class="flex items-start justify-between ">
-                            <div class="p-3 bg-gradient-to-br from-gray-600 to-gray-800 rounded-xl text-white">
+                            <div class="p-3 text-white bg-linear-to-br from-gray-600 to-gray-800 rounded-xl">
                                 <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24">
                                     <path
                                         d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
@@ -551,25 +563,24 @@
 
                         </div>
                         <div>
-                            <h3 class="text-xl mb-1 text-white transition-colors">GitHub</h3>
-                            <p class="text-sm text-gray-400 mb-1 group-hover:text-gray-200 transition-colors">
-                                @votre-username</p>
-                            <p class="text-sm text-gray-500 mb-1 group-hover:text-gray-300 transition-colors">Découvrez
-                                mes
-                                projets open source</p>
+                            <h3 class="mb-1 text-xl text-white transition-colors">GitHub</h3>
+                            <p class="mb-1 text-sm text-gray-400 transition-colors group-hover:text-gray-200">
+                                @ChristEdenKouame</p>
+                            <p class="mb-1 text-sm text-gray-500 transition-colors group-hover:text-gray-300">
+                                Découvrez mes projets</p>
                         </div>
                     </div>
                 </a>
 
                 <!-- LinkedIn -->
-                <a href="https://linkedin.com" target="_blank"
-                    class="group relative bg-gray-800 rounded-2xl p-2 shadow-lg hover:shadow-2xl hover:shadow-blue-700/50 hover:-translate-y-2 transition-all duration-300 overflow-hidden border border-gray-700">
+                <a href="https://www.linkedin.com/in/christ-eden-kouame-80b4b5323/" target="_blank"
+                    class="relative p-2 overflow-hidden transition-all duration-300 bg-gray-800 border border-gray-700 shadow-lg group rounded-2xl hover:shadow-2xl hover:shadow-blue-700/50 hover:-translate-y-2">
                     <div
-                        class="absolute inset-0 bg-gradient-to-br from-blue-600 to-blue-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        class="absolute inset-0 transition-opacity duration-300 opacity-0 bg-linear-to-br from-blue-600 to-blue-800 group-hover:opacity-100">
                     </div>
-                    <div class="relative z-10 flex gap-6 items-center">
+                    <div class="relative z-10 flex items-center gap-6">
                         <div class="flex items-start justify-between">
-                            <div class="p-3 bg-gradient-to-br from-blue-600 to-blue-800 rounded-xl text-white">
+                            <div class="p-3 text-white bg-linear-to-br from-blue-600 to-blue-800 rounded-xl">
                                 <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24">
                                     <path
                                         d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
@@ -577,10 +588,11 @@
                             </div>
                         </div>
                         <div>
-                            <h3 class="text-xl mb-1 text-white transition-colors">LinkedIn</h3>
-                            <p class="text-sm text-gray-400 mb-1 group-hover:text-gray-200 transition-colors">Votre Nom
+                            <h3 class="mb-1 text-xl text-white transition-colors">LinkedIn</h3>
+                            <p class="mb-1 text-sm text-gray-400 transition-colors group-hover:text-gray-200">Christ
+                                Eden Kouame
                             </p>
-                            <p class="text-sm text-gray-500 mb-1 group-hover:text-gray-300 transition-colors">
+                            <p class="mb-1 text-sm text-gray-500 transition-colors group-hover:text-gray-300">
                                 Connectons-nous professionnellement</p>
                         </div>
 
@@ -588,14 +600,14 @@
                 </a>
 
                 <!-- WhatsApp -->
-                <a href="https://linkedin.com" target="_blank"
-                    class="group relative bg-gray-800 rounded-2xl p-2 shadow-lg hover:shadow-2xl hover:shadow-green-700/50 hover:-translate-y-2 transition-all duration-300 overflow-hidden border border-gray-700">
+                <a href="https://wa.me/2250757744248" target="_blank"
+                    class="relative p-2 overflow-hidden transition-all duration-300 bg-gray-800 border border-gray-700 shadow-lg group rounded-2xl hover:shadow-2xl hover:shadow-green-700/50 hover:-translate-y-2">
                     <div
-                        class="absolute inset-0 bg-gradient-to-br from-green-600 to-green-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        class="absolute inset-0 transition-opacity duration-300 opacity-0 bg-linear-to-br from-green-600 to-green-800 group-hover:opacity-100">
                     </div>
-                    <div class="relative z-10 flex gap-6 items-center">
+                    <div class="relative z-10 flex items-center gap-6">
                         <div class="flex items-start justify-between">
-                            <div class="p-3 bg-gradient-to-br from-green-600 to-green-800 rounded-xl text-white">
+                            <div class="p-3 text-white bg-linear-to-br from-green-600 to-green-800 rounded-xl">
                                 <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24">
                                     <path
                                         d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
@@ -603,11 +615,12 @@
                             </div>
                         </div>
                         <div>
-                            <h3 class="text-xl mb-1 text-white transition-colors">WhatsApp</h3>
-                            <p class="text-sm text-gray-400 mb-1 group-hover:text-gray-200 transition-colors">Votre Nom
+                            <h3 class="mb-1 text-xl text-white transition-colors">WhatsApp</h3>
+                            <p class="mb-1 text-sm text-gray-400 transition-colors group-hover:text-gray-200">+225 07 57
+                                744 248
                             </p>
-                            <p class="text-sm text-gray-500 mb-1 group-hover:text-gray-300 transition-colors">
-                                Connectons-nous professionnellement</p>
+                            <p class="mb-1 text-sm text-gray-500 transition-colors group-hover:text-gray-300">
+                                Discutons de manière fluide</p>
                         </div>
 
                     </div>
@@ -615,13 +628,13 @@
 
                 <!-- Mail -->
                 <a href="mailto:contact@example.com" target="_blank"
-                    class="group relative bg-gray-800 rounded-2xl p-2 shadow-lg hover:shadow-2xl hover:shadow-red-700/50 hover:-translate-y-2 transition-all duration-300 overflow-hidden border border-gray-700">
+                    class="relative p-2 overflow-hidden transition-all duration-300 bg-gray-800 border border-gray-700 shadow-lg group rounded-2xl hover:shadow-2xl hover:shadow-red-700/50 hover:-translate-y-2">
                     <div
-                        class="absolute inset-0 bg-gradient-to-br from-red-600 to-red-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        class="absolute inset-0 transition-opacity duration-300 opacity-0 bg-linear-to-br from-red-600 to-red-800 group-hover:opacity-100">
                     </div>
-                    <div class="relative z-10 flex gap-6 items-center">
+                    <div class="relative z-10 flex items-center gap-6">
                         <div class="flex items-start justify-between">
-                            <div class="p-3 bg-gradient-to-br from-red-600 to-red-800 rounded-xl text-white">
+                            <div class="p-3 text-white bg-linear-to-br from-red-600 to-red-800 rounded-xl">
                                 <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -629,71 +642,56 @@
                             </div>
                         </div>
                         <div>
-                            <h3 class="text-xl mb-1 text-white transition-colors">Mail</h3>
-                            <p class="text-sm text-gray-400 mb-1 group-hover:text-gray-200 transition-colors">Votre Nom
+                            <h3 class="mb-1 text-xl text-white transition-colors">Mail</h3>
+                            <p class="mb-1 text-sm text-gray-400 transition-colors group-hover:text-gray-200">
+                                kchristeden17@gmail.com
                             </p>
-                            <p class="text-sm text-gray-500 mb-1 group-hover:text-gray-300 transition-colors">
-                                Connectons-nous professionnellement</p>
+                            <p class="mb-1 text-sm text-gray-500 transition-colors group-hover:text-gray-300">
+                                Envoyez-moi un mail</p>
                         </div>
 
                     </div>
                 </a>
+            </div>
 
+            <!-- Call to Action -->
+            <div class="container px-4 mx-auto mt-10 text-center">
+                <div class="p-8 mx-auto my-20 bg-gray-800 border border-gray-700 shadow-xl rounded-2xl max-w-7xl">
+                    <h3 class="mb-4 text-2xl font-bold text-white">Je serai ravis de collaborer pour des projets ou
+                        des stages
+                    </h3>
+                    <p class="mb-6 text-gray-400">
+                        N'hésitez pas à me contacter sur l'une de ces plateformes. Je suis toujours ouvert
+                        aux nouvelles opportunités et collaborations !
+                    </p>
+                    <a href="mailto:contact@example.com"
+                        class="inline-flex items-center gap-2 px-6 py-3  bg-gray-900 text-white rounded-xl shadow-xl hover:shadow-2xl hover:scale-[1.01] transition-all duration-300 text-lg font-semibold">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                        Envoyez-moi un email
+                    </a>
+                </div>
+            </div>
 
     </section>
-
-    <!-- Call to Action -->
-    <section class="mt-10 text-center container mx-auto px-4">
-        <div class="bg-gray-800 rounded-2xl p-8 shadow-xl max-w-7xl mx-auto border border-gray-700 my-20">
-            <h3 class="text-2xl mb-4 text-white font-bold">Je serai ravis de collaborer pour des projets ou des stages
-            </h3>
-            <p class="text-gray-400 mb-6">
-                N'hésitez pas à me contacter sur l'une de ces plateformes. Je suis toujours ouvert
-                aux nouvelles opportunités et collaborations !
-            </p>
-            <a href="mailto:contact@example.com"
-                class="inline-flex items-center gap-2 px-6 py-3 px-8 py-3 bg-gray-900 text-white rounded-xl shadow-xl hover:shadow-2xl hover:scale-[1.01] transition-all duration-300 text-lg font-semibold">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-                Envoyez-moi un email
-            </a>
-        </div>
-    </section>
-    </div>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-8 border-t border-gray-800">
-        <div class="container mx-auto px-4">
+    <footer class="py-8 text-white bg-gray-900 border-t border-gray-800">
+        <div class="container px-4 mx-auto">
             <div class="flex flex-col items-center justify-center">
                 <p class="flex items-center gap-2 text-gray-400">
-                    Créé avec par Christ Eden Kouamé un étudiant développeur passionné
+                    Merci pour votre visite
                 </p>
-                <p class="text-gray-500 text-sm mt-2">
-                    © 2026 - Tous droits réservés
+                <p class="mt-2 text-sm text-gray-500">
+                    © 2026 - Christ Eden Kouamé - Tous droits réservés
                 </p>
             </div>
         </div>
     </footer>
 
-    <script>
-        // Mobile Menu Toggle
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Close mobile menu when clicking on a link
-        const mobileLinks = mobileMenu.querySelectorAll('a');
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
-    </script>
+    <script src="src/script.js"></script>
 </body>
 
 </html>
